@@ -1,3 +1,65 @@
+<%
+=begin %>
 <p>
   I'm in a <em>view</em>!
 </p>
+
+<p>The time now is: <%= Time.now %></p>
+
+<ul>
+  <% [ 'Papillard', 'ssaunier' ].each do |username| %>
+    <li>
+      <%= username %>
+    </li>
+  <% end %>
+</ul>
+
+<p>Iterate using some instance variables</p>
+
+<% @usernames.each do |username| %>
+  <li>
+    <%= username %>
+  </li>
+<% end %>
+
+<%
+=end %>
+    <!-- Banner section -->
+    <div class="banner">
+        <h1 id="special">My First Web App (Sourdough)</h1>
+        <p>Below is a link <%= Time.now.strftime("%I:%M %p") %></p>
+        <a href="/people" class="btn-blue">People</a>
+    </div>
+
+
+    <!-- Cards section -->
+    <div class="container">
+        <h2> These are my favorite breads</h2>
+
+        <div class="cards">
+            <div class="card-white">
+                <h3>Plain Sourdough</h3>
+                <p>No thrills - white flour</p>
+            </div>
+
+            <div class="card-white">
+                <h3>Baguettes</h3>
+                <p>Crispy white sticks of bread</p>
+            </div>
+
+            <div class="card-white">
+                <h3>Olive and Tomatoe Bread</h3>
+                <p>Loaves with nice things inside</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>some content in the footer</p>
+    </div>
+
+
+</body>
+</html>
